@@ -1,9 +1,9 @@
 # 🚀 Sprintal - A Project Management Tool
 
 > **A full-featured bilingual Kanban + Scrum + Agile project manager**  
-> Built with React 19 | Persian & English | Dark & Light mode
+> Built with AI Agent | React 19 || Persian & English | Dark & Light mode
 
-![Version](https://img.shields.io/badge/version-2.0-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-1.0-blue?style=flat-square)
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
 ![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
@@ -13,7 +13,7 @@
 ## ✨ Features at a Glance
 
 ### 📋 Kanban Board
-- Drag & drop tasks between columns (powered by `@dnd-kit`)
+- Drag & drop tasks between columns
 - Add, edit, delete tasks with title, description, priority, due date, labels, story points, epic & sprint association
 - Add, rename, reorder, and delete columns
 - **WIP Limits** — set maximum tasks per column; visual warning when exceeded ✓
@@ -31,7 +31,7 @@
 - Create time-boxed iterations with goals and date ranges (Persian or Gregorian)
 - Sprint planning — assign backlog items, move stories to board
 - Active sprint filter on the board
-- **Burndown Chart** — ideal vs. actual line chart
+- **Burndown Chart** — ideal vs. actual line chart ✓
 - **Velocity Chart** — track completed points per sprint ✓
 - Sprint completion — unfinished items automatically return to backlog
 
@@ -76,68 +76,6 @@
 - **Export** your entire board as a downloadable JSON file ✓
 - Reset to default sample data with one click
 
----
-
-## 🧰 Tech Stack
-
-| Technology | Purpose |
-|---|---|
-| **React 19** | Hooks, Context API, useReducer |
-| **React Router v7** | Client-side routing, nested layouts |
-| **@dnd-kit** | Drag & drop (tasks, columns, sorting) |
-| **Recharts** | Bar, pie, line, and area charts |
-| **Vite 8** | Lightning-fast build tool |
-| **jalaali-js** | Solar Hijri date conversion |
-| **CSS Custom Properties** | Theming (dark/light) |
-| **localStorage** | Client-side persistence |
-
----
-
-## 📁 Project Structure
-
-```
-src/
-├── context/
-│   ├── BoardContext.jsx    — Central state (useReducer + localStorage + activity log)
-│   ├── AuthContext.jsx     — Login / logout / roles
-│   ├── ThemeContext.jsx    — Dark/light theme
-│   └── LanguageContext.jsx — English / Persian i18n
-├── components/
-│   ├── Layout.jsx          — Sidebar + Header + outlet
-│   ├── Sidebar.jsx         — Navigation with SVG icons & badge counts
-│   ├── Header.jsx          — User info, theme/lang toggle, reset & export
-│   ├── Board.jsx           — Kanban board with DnD, sprint filter, WIP
-│   ├── Column.jsx          — Droppable column with WIP badge
-│   ├── TaskCard.jsx        — Draggable card with all metadata
-│   ├── TaskModal.jsx       — Full task editor with comments & acceptance criteria
-│   ├── Backlog.jsx         — Product backlog management
-│   ├── Sprints.jsx         — Sprint lifecycle with date inputs
-│   ├── Dashboard.jsx       — Charts, stats, workload, velocity
-│   ├── MeetingsPage.jsx    — Meeting CRUD with minutes
-│   ├── ActivityLogPage.jsx — Full activity history viewer
-│   ├── EpicsPage.jsx       — Epic management (admin)
-│   ├── LabelsPage.jsx      — Label management (admin)
-│   ├── UsersPage.jsx       — User management with photo upload (admin)
-│   ├── ProtectedRoute.jsx  — Auth & role gating
-│   ├── LoginPage.jsx       — Login form with show/hide password
-│   ├── DateInput.jsx       — Locale-aware date picker wrapper
-│   ├── ShamsiDatePicker.jsx— Solar Hijri 3-select picker
-│   ├── TimeInput.jsx       — Styled hour:minute picker
-│   ├── PhotoUpload.jsx     — Styled avatar upload with preview
-│   └── ConfirmModal.jsx    — Confirmation dialog
-├── hooks/
-│   └── useLocalStorage.js  — Generic localStorage hook
-├── data/
-│   └── seed.js             — Default board data & constants
-├── i18n/
-│   ├── en.js               — English translations
-│   └── fa.js               — Persian translations
-├── utils/
-│   └── dateFormat.js       — Date formatting (Gregorian + Jalali)
-├── App.jsx                 — Route definitions
-├── main.jsx                — Entry point
-└── index.css               — Complete stylesheet
-```
 
 ---
 
@@ -165,22 +103,10 @@ npm run build
 npm run preview
 ```
 
----
-
-## 🧪 Default Login Credentials
-
-| Role | Username | Password |
-|---|---|---|
-| 🛡️ Admin | `Admin` | `admin` |
-| 👤 Member | `User` | `user` |
-| 👤 Member | `Test` | `test` |
-
----
-
 ## 🌟 What Makes FlowBoard Special?
 
 - ✅ **100% client-side** — no backend, no database, no cloud fees
-- ✅ **Persian calendar support** — the only Kanban app with Solar Hijri dates
+- ✅ **Persian calendar support** — the only PM app with Solar Hijri dates
 - ✅ **Bilingual UI** — seamless switch between English and Persian
 - ✅ **All Agile ceremonies** — from daily board work to sprint retrospectives
 - ✅ **Portfolio-ready** — clean architecture, modern stack, production-quality code
